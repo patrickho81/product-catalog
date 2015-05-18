@@ -1,0 +1,21 @@
+/** css reset **/
+html, body{margin: 0;padding: 0;}
+
+
+/** container **/
+.container h1{text-align: center;padding-bottom:50px;}
+
+
+/** product box **/
+.product{border:1px solid black;text-align: center;}
+.product a{font-weight: bold;display:block;height:40px;}
+.product img{width:80%;height:auto;}
+
+
+/** below is a fix for one of the image **/
+@media only screen and (min-width: 1170px) {	
+	.product img{max-height:278px;}
+}
+@media only screen and (min-width: 970px) and (max-width: 1169px){	
+	.product img{max-height:350px;}
+}

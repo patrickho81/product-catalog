@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/my.css">
+
+<!-- JavaScript -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/controllers.js"></script>
+
+<body>
+	<div ng-app="Tatcha" ng-controller="productListCtrl" id="productList" class="container">
+		<h1>Tatcha product catalog</h1>
+
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="inner row">
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 product" ng-repeat="product in products">
+					<a href="" class="productLink" ng-click="getProductURL(product.entity_id, $event, $window)">{{product.name}}</a>
+					<img src="{{product.image_url}}" alt="{{product.name}}" />
+				</div><!--/.product-->
+			</div>
+		</div>
+
+	</div><!--/.container-->
+
+</body>
+</html>
+
